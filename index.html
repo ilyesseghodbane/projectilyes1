@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Elyes Bookstore</h1>
+        <input type="text" id="searchBar" placeholder="Search for books...">
+    </header>
+    <nav>
+        <ul id="categoryList">
+            <li onclick="filterBooks('All')">All</li>
+            <li onclick="filterBooks('Fiction')">Fiction</li>
+            <li onclick="filterBooks('Non-Fiction')">Non-Fiction</li>
+            <li onclick="filterBooks('Science')">Science</li>
+            <li onclick="filterBooks('Fantasy')">Fantasy</li>
+        </ul>
+    </nav>
+    <main>
+        <section id="bookDisplay"></section>
+        <section id="bookDetails" class="hidden">
+            <h2 id="bookTitle"></h2>
+            <img id="bookImage" alt="Book Cover">
+            <p id="bookDescription"></p>
+            <p><strong>Author:</strong> <span id="bookAuthor"></span></p>
+            <p><strong>ISBN:</strong> <span id="bookISBN"></span></p>
+            <button onclick="closeDetails()">Close</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
